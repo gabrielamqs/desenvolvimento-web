@@ -1,0 +1,31 @@
+.layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 60px 1fr 40px;
+    min-height: 0%;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+}
+
+
+header {
+    grid-area: header;
+    background-color: aliceblue;
+}
+
+sidebar {
+    grid-area: sidebar;
+    background-color: bisque;
+}
+
+main {
+    grid-area: main;
+    background-color: silver;
+}
+
+footer {
+    grid-area: footer;
+    background-color: blanchedalmond;
+}

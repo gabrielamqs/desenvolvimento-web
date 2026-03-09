@@ -1,0 +1,21 @@
+PX: px é absoluto - 16px é sempre 16px. Unidade relativas se adaptam ao contexto.
+
+EM: relativo ao font-size do elemento pai.
+.container {font-size: 16px}
+.container p {font-size: 3em} (3 vezes 16: )
+
+REM: relativo ao font-size do elemento raiz (html).
+
+PORCENTAGEM: relativo ao elemento pai.
+
+VIEWPORT UNITS:
+- vw
+- vh
+- vmin
+- vmax
+
+-CLAMP(): Limita valores entre mínimo e máximo.
+
+----------------------------------------------------------------------------------------------
+
+MEDIA QUERIES: permitem aplicar CSS condicionalmente baseado nas característica do dispositivo (TV, celular, desktop)
