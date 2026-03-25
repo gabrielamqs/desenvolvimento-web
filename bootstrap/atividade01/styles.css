@@ -7,13 +7,11 @@ body {
 .header {
     background-color: #808080;
     height: 100px;
-    width: 100%;
 }
 
 .footer {
     background-color: #808080;
     height: 150px;
-    width: 100%;
 }
 
 .card {
