@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Campos de Formulário</h1>
+    <hr>
+    <form action="/cadastrar">
+        <label>Nome:<br>
+            <input type="text" id="nome" name="nome">
+        </label><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="senha">Senha:</label><br>
+        <input type="password" id="senha" name="senha"><br><br>
+
+        <label for="idade">Idade:</label><br>
+        <input type="number" id="idade" name="idade" min="0" max="120" step="2"><br><br>
+
+        <label for="dataNascimento">Data de Nascimento:</label><br>
+        <input type="date" id="dataNascimento" name="dataNascimento" min="1906-02-24" max="2026-02-23"><br><br>
+
+        <label for="horarioAlmoco">Horário de Almoço:</label><br>
+        <input type="time" id="horarioAlmoco" name="horarioAlmoco" min="10:00" max="15:00" step="3600"><br><br>
+
+        <label for="dataHoraConsulta">Data e Hora da Consulta:</label><br>
+        <input type="datetime-local" id="dataHoraConsulta" name="dataHoraConsulta" min="2026-02-23T00:00" max="2026-02-23T23:59" step="3600"><br><br>
+
+        <label for="busca">Nome:</label><br>
+        <input type="search" id="busca" name="busca"><br><br>
+
+        <label for="telefone">Telefone:</label><br>
+        <input type="tel" id="telefone" name="telefone" pattern="[0-9]"{11}><br><br>
+
+        <label for="corFavorita"> Cor favorita</label>
+        <input type="color" id="corFavorita" name="corFavorita"><br><br>
+
+        <label for="quantidadeFilhos">Quantidade de Filhos:</label><br>
+        <input type="range" id="quantidadeFilhos" name="quantidadeFilhos" min="0" max="10" step="2"><br><br>
+
+        <label for="estadoCivil">Estado Civil</label><br>
+        <input type="radio" id="solteiro" name="estadoCivil" value="solteiro">
+        <label for="solteiro">Solteiro(a)</label><br>
+        <input type="radio" id="casado" name="estadoCivil" value="casado">
+        <label for="casado">Casado(a)</label><br>
+        <input type="radio" id="divorciado" name="estadoCivil" value="divorciado">
+        <label for="divorciado">Divorciado(a)</label><br>
+        <input type="radio" id="viuvo" name="estadoCivil" value="viuvo">
+        <label for="viuvo">Viúvo(a)</label><br><br>
+
+        <label for="receberNovidades">Receber Novidades:</label>
+        <input type="checkbox" id="receberNovidades" name="receberNovidades"><br><br>
+
+        <label for="curriculoPdf">Currículo PDF</label>
+        <input type="file" id="curriculoPdf" name="curriculoPdf" accept=".pdf"><br><br>
+
+        <input type="hidden" id="idUsuario" name="idUsuario" value="123456">
+
+        <label for="ufNatal">UF de Nascimento:</label>
+        <select id="ufNatal" name="ufNatal">
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <optioin value= "SC" >Santa Catarina </optioin >
+        </select><br><br>
+
+        <label for="assuntosInteresse">Assuntos de Interesse:</label><br>
+        <select id="assuntosInteresse" name="assuntosInteresse" multiple size="4">
+            <option value="tecnologia">Tecnologia</option>
+            <option value="esportes">Esportes</option>
+            <option value="arte">Arte</option>
+            <option value="ciencia">Ciência</option>
+        </select><br><br>
+
+        <label for="miniBio">Mini Bio:</label><br>
+        <textarea id="miniBio" name="miniBio" rows="4" cols="50"></textarea><br><br>
+
+        <!-- <iput type="submit" value="Cadastrar"/><br><br> -->
+        <button type="submit">Cadastrar</button>
+        
+
+        <div></div>
+        <header></header>
+        <footer></footer>
+        <nav></nav>
+        <aside></aside>
+        <section></section>
+        <main></main>
+        <article></article>
+        <dialog></dialog>
+        
+    </form>
+</body>
+
+</html>
