@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "configurations": [    
+    {
+      "name": "Bun: Run current TypeScript file",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "bun",
+      "program": "${file}",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "skipFiles": [
+        "<node_internals>/**"
+      ]
+    }
+  ]
+}
