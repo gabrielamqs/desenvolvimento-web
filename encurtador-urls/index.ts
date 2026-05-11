@@ -47,6 +47,14 @@ const servidor = Bun.serve({
             return Response.redirect(registro.urlOriginal, 302);
         }
 
+        if (metodo === "GET" && caminho === "/app.js") {
+            return new Response(Bun.file("./public/app.js"));
+        }
+
+        if (metodo === "GET" && caminho === "/styles.css") {
+            return new Response(Bun.file("./public/styles.css"));
+        }
+
         // GET / -> serve o frontend
         if (metodo === "GET" && caminho === "/") {
             return new Response(Bun.file("./public/index.html"));
