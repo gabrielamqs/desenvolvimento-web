@@ -1,30 +1,71 @@
 <!-- public/index.html -->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
+        <title>Encurtador de URLs</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles.css">
-    <title>Encurtador de URLs</title>
-</head>
+    <body>
+        <h1>🔗 Encurtador de URLs</h1>
 
-<body>
-    <h1>Encurtador de URLs</h1>
-    <input id="url" type="url" placeholder="https://exemplo.com/...">
-    <button id="btn">Encurtar</button>
-    <div id="resultado"></div>
-    <h2>URLs cadastradas</h2>
-    <table id="tabela">
-        <thead>
-            <tr>
-                <th>Código</th>
-                <th>Original</th>
-                <th>Acessos</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
-    <script src="app.js"></script>
-</body>
+        <div class="form-card">
+            <div class="form-group">
+                <label for="url"
+                    >URL original <span class="required">*</span></label
+                >
+                <input
+                    id="url"
+                    type="url"
+                    placeholder="https://exemplo.com/pagina-longa..."
+                />
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="codigo"
+                        >Código personalizado
+                        <span class="opcional">(opcional)</span></label
+                    >
+                    <input
+                        id="codigo"
+                        type="text"
+                        placeholder="Ex: meulink"
+                        maxlength="10"
+                    />
+                    <small>Apenas letras e números, 4–10 caracteres.</small>
+                </div>
+                <div class="form-group">
+                    <label for="expira"
+                        >Expira em
+                        <span class="opcional">(opcional)</span></label
+                    >
+                    <input id="expira" type="datetime-local" />
+                </div>
+            </div>
+            <button id="btn">Encurtar</button>
+        </div>
 
+        <div id="resultado"></div>
+
+        <h2>URLs cadastradas</h2>
+        <div class="table-wrapper">
+            <table id="tabela">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>URL Original</th>
+                        <th>Criado em</th>
+                        <th>Expira em</th>
+                        <th>Acessos</th>
+                        <th>Stats</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <script src="app.js"></script>
+    </body>
 </html>
