@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- Aqui estamos usando o React para criar elementos da interface do usuário de forma declarativa.
+     Mas há uma dor: a complexidade de criar e gerenciar a árvore de elementos manualmente. -
+     Aqui estou criando a ÁRVORE VIRTUAL DOM DO REACT -->
+
+<body>
+    <div id="root"></div>
+    <script type="module">
+        import React from "https://esm.sh/react@19";
+        import { createRoot } from "https://esm.sh/react-dom@19/client";
+
+        const arvore = React.createElement("div", null, 
+            React.createElement("h1", null, "Olá, React!"),
+            React.createElement("ul", null, 
+                React.createElement("li", null, "Item 1"),
+                React.createElement("li", null, "Item 2"),
+                React.createElement("li", null, "Item 3")
+            )
+        );
+
+        const raiz = createRoot(document.getElementById("root"));
+        raiz.render(arvore);
+    </script>
+</body>
+</html>

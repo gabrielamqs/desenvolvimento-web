@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introdução ao React</title>
+  </head>
+  <body>
+    <div id="display">0</div>
+    <p>Você clicou <span id="display2">0</span> vezes.</p>
+    <button id="btn">+1</button>
+
+    <!-- Esse código tem um problema: ele não é reativo. 
+    Ou seja, quando o valor de count é atualizado, a interface do usuário não é atualizada automaticamente. 
+    Para resolver esse problema, podemos usar o React, que é uma biblioteca JavaScript para construir 
+    interfaces de usuário reativas. -->
+
+    <script>
+      let count = 0;
+      const display = document.getElementById("display");
+      const display2 = document.getElementById("display2");
+      const btn = document.getElementById("btn");
+
+      btn.addEventListener("click", () => {
+        count = count + 1;
+        display.textContent = count;
+        display2.textContent = count;
+      });
+    </script>
+  </body>
+</html>

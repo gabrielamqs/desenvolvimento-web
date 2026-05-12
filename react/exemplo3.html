@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introdução ao React</title>
+  </head>
+  <body>
+    <div id="display">0</div>
+    <p>Você clicou <span id="display2">0</span> vezes.</p>
+    <button id="btn">+1</button>
+
+  <!-- Fazendo o que o react faz, mas de forma manual e renderizando toda a página.
+       A ideia do React é justamente componentizar essa renderização. -->
+    <script>
+        let state = { count: 0}
+
+        function render() {
+            document.getElementById("app").innerHTML = `
+            <p>&{state.count}</p>
+            <p>Você clicou <span id="display2">${state.count}</span> vezes.</p>
+            <button onClick="incrementar()">+1</button>
+            `;
+        }
+
+        function incrementar() {
+            state = { ...state, count: state.count + 1 };
+            render();
+        }
+
+        render();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Document</title>
+</head>
+
+<!-- Agora eu posso usar tags HTML diretamente para criar os elementos do React
+     PARECE HTML, mas NÃO É. Isso é JSX, o babel traduz isso para montar a árvore virtual DOM do React 
+     JSX é uma extensão da sintaxe do JavaScript -->
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel" data-type="module">
+        import React from "https://esm.sh/react@19";
+        import { createRoot } from "https://esm.sh/react-dom@19/client";
+
+        /* 
+        Dentro de uma expressão JSX, eu só posso ter um elemento pai, 
+        ou seja, eu não posso ter dois elementos no mesmo nível, eles 
+        precisam estar dentro de um elemento pai. 
+        */
+        const arvore = (
+            <div>
+                <h1>Lista:</h1>
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+            </div>
+        );
+
+        const raiz = createRoot(document.getElementById("root"));
+        raiz.render(arvore);
+    </script>
+</body>
+</html>

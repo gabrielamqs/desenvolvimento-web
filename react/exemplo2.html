@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introdução ao React</title>
+  </head>
+  <body>
+    <ul id="lista"></ul>
+    <input type="text" id="inp" /> 
+    <button id="btn">Adicionar</button>
+
+    <!-- Estado é o que armazena as informações de uma aplicação, é o que define o que precisa ser atualizado.
+         AQUI ESTOU CRIANDO A ÁRVORE DOM DO NAVEGADOR -->
+
+    <script>
+        const itens = [];
+        const ul= document.getElementById("lista");
+        const btn = document.getElementById("btn");
+        const inp = document.getElementById("inp");
+
+      btn.addEventListener("click", () => {
+        const valor = inp.value;
+        itens.push(valor);
+        ul.innerHTML = "";
+
+        for (const item of itens) {
+            const li = document.createElement("li");
+            li.textContent = item;
+            ul.appendChild(li);
+        }
+      });
+    </script>
+  </body>
+</html>
